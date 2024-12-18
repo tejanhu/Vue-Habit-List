@@ -13,7 +13,7 @@
       <!-- habit lists -->
         <ul>
           <div class="habitItems">
-              <habit-item v-bind:habit="habit" v-for="habit in habits" :key="habit.id"></habit-item>
+              <habit-item v-bind:habit="habit" v-for="(habit, index) in habits" :key="habit.id" @delete="deleteHabit(index)"></habit-item>
           </div>
         </ul>
       <!-- buttons -->
@@ -72,7 +72,10 @@ export default {
     },
     clearAll() {
       this.habits = [];
-    }
+    },
+    deleteHabit(index){
+      this.habits.splice(index, 1);
+    },
   },
 };
 </script>
