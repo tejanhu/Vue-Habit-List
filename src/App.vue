@@ -28,7 +28,7 @@ export default {
         {
           id: 3,
           title: "Exercise for 15 mins",
-          completed: false,
+          completed: true,
         },
         {
           id: 4,
@@ -38,7 +38,7 @@ export default {
         {
           id: 5,
           title: "Vacuum the house once a week",
-          completed: false,
+          completed: true,
         },
       ],
     };

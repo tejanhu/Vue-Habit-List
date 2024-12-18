@@ -26,7 +26,7 @@
       </div>
       <!-- pending habit -->
       <div class="pendingHabits">
-        <span>Pending Habits: </span>
+        <span>Pending Habits: {{incomplete}}</span>
       </div>
     </div>
   </div>
@@ -36,6 +36,11 @@
 export default {
   name: "Habit",
   props:['habits'],
+  computed:{
+    incomplete(){
+      return this.habits.filter(this.inProgress).length;
+    }
+  },
   methods: {
     inProgress(habit){
       return !this.isCompleted(habit);
