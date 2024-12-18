@@ -3,7 +3,7 @@
     <div class="habit">
       <!-- title -->
       <div class="title">
-        <h1>To Do List</h1>
+        <h1>Habit List</h1>
       </div>
       <!-- form -->
       <div class="form">
