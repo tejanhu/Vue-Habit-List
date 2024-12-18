@@ -10,7 +10,7 @@ general
 
 body {
   font: 15px/1.4 "Poppins", sans-serif;
-  background: #4ec5c1;
+  background: #960019;
   color: #333;
 }
 
@@ -38,7 +38,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
-  border: 1px solid #4ec5c1;
+  border: 1px solid #960019;
 }
 
 button {
@@ -86,12 +86,16 @@ habit
 .form button {
   background: none;
   border: none;
-  color: #4ec5c1;
+  color: #960019;
   font-size: 18px;
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+}
+
+.fa-trash-alt{
+  color: #dc3545;
 }
 
 .clearBtns {
@@ -102,7 +106,7 @@ habit
 
 .clearBtns button {
   width: 100%;
-  background: #4ec5c1;
+  background: #960019;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -138,7 +142,7 @@ habit items
 }
 
 .habitItems button:hover {
-  color: #4ec5c1;
+  color: #960019;
 }
 
 .habitItems .toggle i {
@@ -148,4 +152,5 @@ habit items
 
 .habitItems .toggle.toggle-completed {
   text-decoration:line-through;
+  color: red;
 }
