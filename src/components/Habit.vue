@@ -11,14 +11,11 @@
         <button @click="addHabit()"><i class="fas fa-plus"></i></button>
       </div>
       <!-- habit lists -->
-      <div class="habitItems">
         <ul>
-          <li v-for="habit in habits" :key="habit.id">
-            <button><i class="far fa-circle"></i>{{habit.title}}</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
+          <div class="habitItems">
+              <habit-item v-bind:habit="habit" v-for="habit in habits" :key="habit.id"></habit-item>
+          </div>
         </ul>
-      </div>
       <!-- buttons -->
       <div class="clearBtns">
         <button v-on:click="clearCompleted()">Clear completed</button>
@@ -33,9 +30,15 @@
 </template>
 
 <script>
+import HabitItem from './Habit-item';
+
 export default {
   name: "Habit",
   props:['habits'],
+  components:{
+    HabitItem
+  }
+  ,
   data() {
     return {
       newHabit: ""
