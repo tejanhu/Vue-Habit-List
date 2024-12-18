@@ -18,12 +18,12 @@ export default {
         {
           id: 1,
           title: "Code for 10 mins",
-          completed: true,
+          completed: false,
         },
         {
           id: 2,
           title: "Learn new vocabulary for 20 mins",
-          completed: true,
+          completed: false,
         },
         {
           id: 3,

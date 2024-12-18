@@ -152,4 +152,5 @@ habit items
 
 .habitItems .toggle.toggle-completed {
   text-decoration:line-through;
+  color: red;
 }
