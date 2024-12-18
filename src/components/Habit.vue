@@ -13,16 +13,8 @@
       <!-- habit lists -->
       <div class="habitItems">
         <ul>
-          <li>
-            <button>Code for 10 mins</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
-          <li>
-            <button>Learn new vocabulary for 20 mins</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
-          <li>
-            <button>Read a book for 30 mins</button>
+          <li v-for="habit in habits" :key="habit.id">
+            <button><i class="far fa-circle"></i>{{habit.title}}</button>
             <button><i class="far fa-trash-alt"></i></button>
           </li>
         </ul>
@@ -30,7 +22,7 @@
       <!-- buttons -->
       <div class="clearBtns">
         <button>Clear completed</button>
-        <button>Clear all</button>
+        <button @click="clearAll()">Clear all</button>
       </div>
       <!-- pending habit -->
       <div class="pendingHabits">
@@ -43,5 +35,11 @@
 <script>
 export default {
   name: "Habit",
+  props:['habits'],
+  methods: {
+    clearAll() {
+      this.habits = [];
+    }
+  },
 };
 </script>

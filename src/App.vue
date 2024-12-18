@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <habit></habit>
+    <habit v-bind:habits="habits"></habit>
   </div>
 </template>
 
