@@ -37,6 +37,9 @@ export default {
   name: "Habit",
   props:['habits'],
   methods: {
+    isCompleted(habit){
+      return habit.completed;
+    },
     clearAll() {
       this.habits = [];
     }
