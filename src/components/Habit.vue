@@ -21,7 +21,7 @@
       </div>
       <!-- buttons -->
       <div class="clearBtns">
-        <button>Clear completed</button>
+        <button v-on:click="clearCompleted()">Clear completed</button>
         <button @click="clearAll()">Clear all</button>
       </div>
       <!-- pending habit -->
@@ -38,10 +38,13 @@ export default {
   props:['habits'],
   methods: {
     inProgress(habit){
-      return !this.habit.isCompleted(habit);
+      return !this.isCompleted(habit);
     },
     isCompleted(habit){
       return habit.completed;
+    },
+    clearCompleted(){
+      this.habits = this.habits.filter(this.inProgress);
     },
     clearAll() {
       this.habits = [];
