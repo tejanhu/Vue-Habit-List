@@ -1,0 +1,47 @@
+<template>
+  <div class="container">
+    <div class="habit">
+      <!-- title -->
+      <div class="title">
+        <h1>To Do List</h1>
+      </div>
+      <!-- form -->
+      <div class="form">
+        <input type="text" placeholder="New Habit" />
+        <button><i class="fas fa-plus"></i></button>
+      </div>
+      <!-- habit lists -->
+      <div class="habitItems">
+        <ul>
+          <li>
+            <button>Code for 10 mins</button>
+            <button><i class="far fa-trash-alt"></i></button>
+          </li>
+          <li>
+            <button>Learn new vocabulary for 20 mins</button>
+            <button><i class="far fa-trash-alt"></i></button>
+          </li>
+          <li>
+            <button>Read a book for 30 mins</button>
+            <button><i class="far fa-trash-alt"></i></button>
+          </li>
+        </ul>
+      </div>
+      <!-- buttons -->
+      <div class="clearBtns">
+        <button>Clear completed</button>
+        <button>Clear all</button>
+      </div>
+      <!-- pending habit -->
+      <div class="pendingHabits">
+        <span>Pending Habits: </span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Habit",
+};
+</script>
