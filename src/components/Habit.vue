@@ -7,8 +7,8 @@
       </div>
       <!-- form -->
       <div class="form">
-        <input type="text" placeholder="New Habit" />
-        <button><i class="fas fa-plus"></i></button>
+        <input type="text" placeholder="New Habit" v-model="newHabit" @keyup.enter.exact="addHabit()" />
+        <button @click="addHabit()"><i class="fas fa-plus"></i></button>
       </div>
       <!-- habit lists -->
       <div class="habitItems">
@@ -36,12 +36,28 @@
 export default {
   name: "Habit",
   props:['habits'],
+  data() {
+    return {
+      newHabit: ""
+    }
+  },
   computed:{
     incomplete(){
       return this.habits.filter(this.inProgress).length;
     }
   },
   methods: {
+    addHabit(){
+      if(this.newHabit){
+        this.habits.push(
+          {
+            title: this.newHabit,
+            completed: false
+          }
+        );
+        this.newHabit = "";
+      }
+    },
     inProgress(habit){
       return !this.isCompleted(habit);
     },
