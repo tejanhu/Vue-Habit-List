@@ -37,6 +37,9 @@ export default {
   name: "Habit",
   props:['habits'],
   methods: {
+    inProgress(habit){
+      return !this.habit.isCompleted(habit);
+    },
     isCompleted(habit){
       return habit.completed;
     },
