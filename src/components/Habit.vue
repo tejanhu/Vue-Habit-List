@@ -22,7 +22,7 @@
       <!-- buttons -->
       <div class="clearBtns">
         <button>Clear completed</button>
-        <button @click="clearAll()">Clear all</button>
+        <button>Clear all</button>
       </div>
       <!-- pending habit -->
       <div class="pendingHabits">
@@ -36,10 +36,5 @@
 export default {
   name: "Habit",
   props:['habits'],
-  methods: {
-    clearAll() {
-      this.habits = [];
-    }
-  },
 };
 </script>
